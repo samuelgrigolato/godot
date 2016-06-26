@@ -5346,7 +5346,8 @@ bool RasterizerGLES2::_setup_material(const Geometry *p_geometry,const Material 
 		float from = current_env->fx_param[VS::ENV_FX_PARAM_FOG_BEGIN];
 		float zf = camera_z_far;
 		float curve = current_env->fx_param[VS::ENV_FX_PARAM_FOG_ATTENUATION];
-		material_shader.set_uniform(MaterialShaderGLES2::FOG_PARAMS,Vector3(from,zf,curve));
+		float density = current_env->fx_param[VS::ENV_FX_PARAM_FOG_DENSITY];
+		material_shader.set_uniform(MaterialShaderGLES2::FOG_PARAMS,from,zf,curve,density);
 		material_shader.set_uniform(MaterialShaderGLES2::FOG_COLOR_BEGIN,Vector3(col_begin.r,col_begin.g,col_begin.b));
 		material_shader.set_uniform(MaterialShaderGLES2::FOG_COLOR_END,Vector3(col_end.r,col_end.g,col_end.b));
 	}

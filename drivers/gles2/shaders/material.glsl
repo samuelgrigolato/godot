@@ -129,7 +129,7 @@ varying highp vec3 ambient_octree_coords;
 #ifdef USE_FOG
 
 varying vec4 fog_interp;
-uniform highp vec3 fog_params;
+uniform highp vec4 fog_params;
 uniform vec3 fog_color_begin;
 uniform vec3 fog_color_end;
 
@@ -1211,7 +1211,7 @@ LIGHT_SHADER_CODE
 
 #ifdef USE_FOG
 
-		diffuse.rgb = mix(diffuse.rgb,fog_interp.rgb,fog_interp.a);
+		diffuse.rgb = mix(diffuse.rgb,fog_interp.rgb,fog_interp.a * fog_params.a);
 
 # if defined(LIGHT_TYPE_OMNI) || defined (LIGHT_TYPE_SPOT)
 		diffuse.rgb = mix(mix(vec3(0.0),diffuse.rgb,attenuation),diffuse.rgb,const_light_mult);

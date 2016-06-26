@@ -143,6 +143,7 @@ void Environment::_bind_methods() {
 	ADD_PROPERTYI( PropertyInfo(Variant::COLOR,"fog/end_color",PROPERTY_HINT_COLOR_NO_ALPHA),_SCS("fx_set_param"),_SCS("fx_get_param"), FX_PARAM_FOG_END_COLOR);
 	ADD_PROPERTYI( PropertyInfo(Variant::REAL,"fog/attenuation",PROPERTY_HINT_EXP_EASING),_SCS("fx_set_param"),_SCS("fx_get_param"), FX_PARAM_FOG_ATTENUATION);
 	ADD_PROPERTYI( PropertyInfo(Variant::BOOL,"fog/bg"),_SCS("fx_set_param"),_SCS("fx_get_param"), FX_PARAM_FOG_BG);
+	ADD_PROPERTYI( PropertyInfo(Variant::REAL,"fog/density",PROPERTY_HINT_RANGE,"0,1,0.01"),_SCS("fx_set_param"),_SCS("fx_get_param"), FX_PARAM_FOG_DENSITY);
 	ADD_PROPERTYI( PropertyInfo(Variant::BOOL,"bcs/enabled"),_SCS("set_enable_fx"),_SCS("is_fx_enabled"), FX_BCS);
 	ADD_PROPERTYI( PropertyInfo(Variant::REAL,"bcs/brightness",PROPERTY_HINT_RANGE,"0.01,8,0.01"),_SCS("fx_set_param"),_SCS("fx_get_param"), FX_PARAM_BCS_BRIGHTNESS);
 	ADD_PROPERTYI( PropertyInfo(Variant::REAL,"bcs/contrast",PROPERTY_HINT_RANGE,"0.01,8,0.01"),_SCS("fx_set_param"),_SCS("fx_get_param"), FX_PARAM_BCS_CONTRAST);

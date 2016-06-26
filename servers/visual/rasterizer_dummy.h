@@ -335,6 +335,7 @@ class RasterizerDummy : public Rasterizer {
 			fx_param[VS::ENV_FX_PARAM_HDR_EXPOSURE_ADJUST_SPEED]=0.5;
 			fx_param[VS::ENV_FX_PARAM_FOG_BEGIN]=100.0;
 			fx_param[VS::ENV_FX_PARAM_FOG_ATTENUATION]=1.0;
+			fx_param[VS::ENV_FX_PARAM_FOG_DENSITY]=1.0;
 			fx_param[VS::ENV_FX_PARAM_FOG_BEGIN_COLOR]=Color(0,0,0);
 			fx_param[VS::ENV_FX_PARAM_FOG_END_COLOR]=Color(0,0,0);
 			fx_param[VS::ENV_FX_PARAM_FOG_BG]=true;
